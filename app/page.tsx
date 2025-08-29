@@ -393,7 +393,7 @@ export default function Portfolio() {
   <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF] to-[#BB86FC] rounded-full animate-spin-slow opacity-20"></div>
   <div className="absolute inset-4 bg-[#16213E] rounded-full flex items-center justify-center overflow-hidden">
     <img
-      src="/anique_image.jpg"
+      src="/logo.jpg"
       alt="Muhammad Anique Profile"
       className="w-64 h-64 object-cover rounded-full"
       style={{ objectPosition: "center" }}

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Muhammad Anique" }],
   creator: "Muhammad Anique",
   icons: {
-    icon: "/anique_image.jpg"}
+    icon: "/favicon_1.jpg"}
 }
 
 export default function RootLayout({
