@@ -64,6 +64,21 @@ function FloatingParticles() {
   );
 }
 
+import { useRouter } from "next/navigation"
+
+function GoToChatButton() {
+  const router = useRouter();
+  return (
+    <Button
+      size="lg"
+      className="bg-gradient-to-r from-[#FF6B6B] to-[#FFD93D] hover:from-[#FFD93D] hover:to-[#FF6B6B] text-white border-0 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+      onClick={() => router.push("/chatpage")}
+    >
+      Go to Chat
+    </Button>
+  );
+}
+
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { scrollYProgress } = useScroll()
@@ -311,14 +326,17 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#00D4FF] to-[#BB86FC] hover:from-[#BB86FC] hover:to-[#00D4FF] text-white border-0 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                <Rocket className="mr-2" size={20} />
-                View Projects
-              </Button>
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-[#00D4FF] to-[#BB86FC] hover:from-[#BB86FC] hover:to-[#00D4FF] text-white border-0 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  <Rocket className="mr-2" size={20} />
+                  View Projects
+                </Button>
+                <GoToChatButton />
+              </div>
             </motion.div>
           </motion.div>
 
